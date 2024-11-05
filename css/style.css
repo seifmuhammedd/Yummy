@@ -1,0 +1,216 @@
+body {
+    background-color: #0D0D0D;
+    color: white;
+}
+
+/* loading Screen */
+.loading-screen {
+    position: fixed;
+    inset: 100px;
+    background-color: #0D0D0D;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+}
+
+.loader {
+    color: #fff;
+    font-size: 10px;
+    width: 1em;
+    height: 1em;
+    border-radius: 50%;
+    position: relative;
+    text-indent: -9999em;
+    animation: mulShdSpin 1.3s infinite linear;
+    transform: translateZ(0);
+}
+
+@keyframes mulShdSpin {
+
+    0%,
+    100% {
+        box-shadow: 0 -3em 0 0.2em,
+            2em -2em 0 0em, 3em 0 0 -1em,
+            2em 2em 0 -1em, 0 3em 0 -1em,
+            -2em 2em 0 -1em, -3em 0 0 -1em,
+            -2em -2em 0 0;
+    }
+
+    12.5% {
+        box-shadow: 0 -3em 0 0, 2em -2em 0 0.2em,
+            3em 0 0 0, 2em 2em 0 -1em, 0 3em 0 -1em,
+            -2em 2em 0 -1em, -3em 0 0 -1em,
+            -2em -2em 0 -1em;
+    }
+
+    25% {
+        box-shadow: 0 -3em 0 -0.5em,
+            2em -2em 0 0, 3em 0 0 0.2em,
+            2em 2em 0 0, 0 3em 0 -1em,
+            -2em 2em 0 -1em, -3em 0 0 -1em,
+            -2em -2em 0 -1em;
+    }
+
+    37.5% {
+        box-shadow: 0 -3em 0 -1em, 2em -2em 0 -1em,
+            3em 0em 0 0, 2em 2em 0 0.2em, 0 3em 0 0em,
+            -2em 2em 0 -1em, -3em 0em 0 -1em, -2em -2em 0 -1em;
+    }
+
+    50% {
+        box-shadow: 0 -3em 0 -1em, 2em -2em 0 -1em,
+            3em 0 0 -1em, 2em 2em 0 0em, 0 3em 0 0.2em,
+            -2em 2em 0 0, -3em 0em 0 -1em, -2em -2em 0 -1em;
+    }
+
+    62.5% {
+        box-shadow: 0 -3em 0 -1em, 2em -2em 0 -1em,
+            3em 0 0 -1em, 2em 2em 0 -1em, 0 3em 0 0,
+            -2em 2em 0 0.2em, -3em 0 0 0, -2em -2em 0 -1em;
+    }
+
+    75% {
+        box-shadow: 0em -3em 0 -1em, 2em -2em 0 -1em,
+            3em 0em 0 -1em, 2em 2em 0 -1em, 0 3em 0 -1em,
+            -2em 2em 0 0, -3em 0em 0 0.2em, -2em -2em 0 0;
+    }
+
+    87.5% {
+        box-shadow: 0em -3em 0 0, 2em -2em 0 -1em,
+            3em 0 0 -1em, 2em 2em 0 -1em, 0 3em 0 -1em,
+            -2em 2em 0 0, -3em 0em 0 0, -2em -2em 0 0.2em;
+    }
+}
+
+
+/* Side Bar */
+
+aside {
+    left: -250px;
+    top: 0;
+    z-index: 101;
+}
+
+.side-tab {
+    width: 250px;
+    background-color: black;
+}
+
+.side-tab .side-links {
+    left: -200px;
+}
+
+.side-tab li {
+    margin-bottom: 16px;
+    cursor: pointer;
+    color: rgb(249, 246, 246);
+    font-weight: 400;
+    line-height: 24px;
+    size: 16px;
+    top: 300px;
+}
+
+.side-nav {
+    width: 66px;
+}
+
+.side-nav img {
+    width: 50px;
+}
+
+.side-nav span {
+    cursor: pointer;
+    font-size: 32px;
+    line-height: 32px;
+    font-weight: 900;
+}
+
+.side-nav .side-nav-footer {
+    cursor: pointer;
+    font-size: 16px;
+    line-height: 16px;
+    font-weight: 900;
+}
+
+/* -------------------------- */
+
+.row-item {
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.row-item-layer {
+    inset: 0;
+    transform: translateY(120%);
+    background-color: rgba(249, 246, 246, 0.7);
+    transition: all 0.5s;
+}
+
+.row-item:hover .row-item-layer {
+    transform: translateY(0);
+}
+
+
+
+
+.meal-details {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 66px;
+    background-color: #0D0D0D;
+    padding-right: 70px;
+    overflow-y: scroll;
+}
+
+.meal-details .top-content span {
+    cursor: pointer;
+}
+
+.meal-details .main-details p {
+    line-height: 24px;
+    color: rgb(249, 246, 246);
+}
+
+.recipes li,
+.tags li {
+    font-size: 16px;
+    margin-inline: 8px;
+    padding: 4px;
+}
+
+
+
+.form-control::placeholder {
+    color: #6C757D;
+}
+
+
+
+.category-item {
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.category-item-layer {
+    inset: 0;
+    transform: translateY(150%);
+    background-color: rgba(249, 246, 246, 0.7);
+    transition: all 0.5s;
+}
+
+.category-item:hover .category-item-layer {
+    transform: translateY(0);
+}
+
+
+.area-icon {
+    font-size: 64px;
+}
+
+.area .col-md-3,
+.ingredient-item {
+    cursor: pointer;
+}
